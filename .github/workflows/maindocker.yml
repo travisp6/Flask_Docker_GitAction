@@ -18,7 +18,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PW: ${{ secrets.DOCKER_PW }}
       run: |
-        docker login -u $DOCKER_USERNAME -p $DOCKER_PW
+        docker login -u $DOCKER_USERNAME -p $DOCKER_PW --password-stdin
     - name: build docker image
       run: |
         docker image build -t travisp6/gitaction:v1 .
