@@ -4,7 +4,6 @@ from datetime import date
 app = Flask(__name__)
 app.secret_key = "1f07j3109jf571fn"
 
-
 @app.route('/')
 @app.route('/home')
 def index():
